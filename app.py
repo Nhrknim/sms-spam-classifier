@@ -40,20 +40,24 @@ st.markdown(
     """
     <style>
 
+    /* App background */
     .stApp {
         background: linear-gradient(
             135deg,
-            #ffe6f2,
-            #fff5fa
+            #ffcce5,
+            #ffe6f2
         );
     }
 
+    /* Title */
     .title {
         color: #d63384;
         text-align: center;
         font-size: 45px;
+        font-weight: bold;
     }
 
+    /* Subtitle */
     .subtitle {
         text-align: center;
         color: #b03070;
@@ -61,6 +65,7 @@ st.markdown(
     }
 
 
+    /* Text area */
     textarea {
         background-color: #fff7fb !important;
         color: #4a0030 !important;
@@ -68,7 +73,12 @@ st.markdown(
         border: 2px solid #ff9acb !important;
     }
 
+    textarea::placeholder {
+        color: #b07090 !important;
+    }
 
+
+    /* Button */
     .stButton button {
         background: linear-gradient(
             90deg,
@@ -76,11 +86,12 @@ st.markdown(
             #ff85c1
         );
 
-        color: white;
+        color: white !important;
         border-radius: 25px;
         height: 50px;
         width: 100%;
         font-size: 18px;
+        font-weight: bold;
         border: none;
         transition: 0.3s;
     }
@@ -88,10 +99,11 @@ st.markdown(
 
     .stButton button:hover {
         transform: scale(1.03);
-        color:white;
+        color: white !important;
     }
 
 
+    /* Result boxes */
     .stSuccess {
         border-radius: 15px;
     }
@@ -105,7 +117,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 st.title("💌 Spam Detector")
 
 input_sms = st.text_area("Enter your message",height=150,placeholder="Paste your SMS or email here...")
